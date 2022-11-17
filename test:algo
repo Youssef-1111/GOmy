@@ -1,0 +1,38 @@
+ALGORITHM checkpoint
+VAR
+I, j: INTEGER;
+str: string;
+len: integer :=0 
+nbwords : INTEGER
+nbvoyels: INTEGER
+
+BEGIN
+i:=1;
+write("write your sentence");
+read(str)
+WHILE (str [i] <> ".") DO
+i:= i+1;
+len:=len +1
+END_WHILE
+write('the length od the sentence is :', len);
+
+nbwords :=0;
+j:=1;
+IF (j<= len and str [j] <> '') THEN
+nbwords :=nbwords+1;
+END_IF
+
+WHILE (j<len and str [j])<> '' DO
+   j:= j+1;
+END_WHILE
+
+write ('the number of words is:' nbwords);
+
+nbvoyels:=0;
+K:=1;
+FOR K FROM 1 TO len  DO
+   IF (str[k] in ['a', 'e', 'i' ,'u','o', 'y']) THEN
+    nbvoyels:= nbvoyels+1;
+   END_IF
+END_FOR
+write ('nb voyels is', nbvoyels);
